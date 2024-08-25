@@ -14,7 +14,7 @@ body {
   column-gap: 286px;
   align-items: center;
   height: 50px;
-  background-image: linear-gradient(299deg, #3e3e3e, #0e1118);
+  background-image: linear-gradient(299deg, #3e3e3e, #2e4e9b);
 }
 .header .logo h1 {
   color: white;
@@ -28,71 +28,72 @@ body {
   font-size: 20px;
   color: white;
 }
-.header .header-item .home-btn {
+/*.header .header-item .home-btn {
   border-bottom: 2px solid rgb(255, 255, 255);
-}
+}*/
 .header .btn {
   display: flex;
   column-gap: 20px;
 }
-.header .btn .login {
+/*.header .btn .login {
   padding: 9px 20px;
   border-radius: 30px;
   border: none;
   background-color: white;
   cursor: pointer;
-}
+}*/
 .header .btn .register {
   padding: 9px 20px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  background-color: rgb(143, 192, 150);
+  background-color: rgb(239, 243, 240);
 }
-.header .btn .deposit {
+.header .btn .login {
  padding: 9px 20px;
  border-radius: 30px;
  border: none;
  cursor: pointer;
- background-color: aquamarine;
+ background-color: rgb(242, 247, 245);
 }
 .home .main-sec .left .txt .rat {
   display: flex;
   align-items: center;
   column-gap: 10px;
 }
-.home .main-sec .left .txt .rat i {
-  color: yellow;
-}
+/*.home .main-sec .left .txt .rat i {
+  color: rgb(0, 47, 255);
+}*/
+/*excellent*/
 .home .main-sec .left .txt .rat p {
   font-size: 20px;
 }
 .home .main-sec .left .txt .rat p span {
-    color: greenyellow;
+    color: rgb(233, 233, 240);
 }
 .home {
   background-image: linear-gradient(299deg, #3e3e3e, #0e1118);
   background-size: cover;
-  height: 565px;
+  height: 500px;
   width: 100%;
   display: flex;
   align-items: center;
   overflow: hidden;
   justify-content: center;
 }
-.home .slide {
+/*.home .slide {
      display: flex;
   column-gap: 5px;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
-}
+}*/
 .home .main-sec {
     display: flex;
   justify-content: center;
   align-items: center;
   padding: 88px;
-  padding-top: 80px;
+  padding-top: 70px;
 }
 .home .main-sec .left .txt {
   display: flex;
@@ -109,11 +110,19 @@ body {
 }
 .home .left .txt .btn {
   display: flex;
-  column-gap: 25px;
+  column-gap: 30px;
+}
+/*image for right*/
+.bn45 {
+    max-width: 630px; /* Medium size - adjust as needed */
+    max-height: 830px; /* Medium size - adjust as needed */
+    border-radius: 10px; /* Rounded corners - adjust as needed */
+    object-fit: cover; /* Ensures the image fits within the container */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .bn45 {
      width: 170px;
-  height: 50px;
+  height: 10px;
 }
 .bn46 {
     width: 150px;
@@ -121,7 +130,7 @@ body {
 }
 .home .left {
      width: 40vw;
-  padding: 30px;
+  padding: 10px;
 }
 .home .right {
   width: 46vw;
@@ -149,7 +158,7 @@ body {
   display: flex;
 }
 .pay-sec .main-box .box {
-  background: white;
+  background: rgb(151, 163, 185);
   border-radius: 10px;
   width: 257px;
   height: 200px;
@@ -161,7 +170,7 @@ body {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .pay-sec .main-box .reward {
-  background: greenyellow;
+  background: rgb(73, 103, 117);
   border-radius: 10px;
   width: 257px;
   height: 200px;
@@ -216,13 +225,13 @@ body {
   column-gap: 10px;
   align-items: center;
 }
-.hero-sec .main-sec .left .btn i {
+/*.hero-sec .main-sec .left .btn i {
   padding: 10px;
-  background-color: greenyellow;
+  background-color: rgb(18, 19, 18);
   border: 1px solid;
   cursor: pointer;
   border-radius: 30px;
-}
+}*/
 .hero-sec .main-sec .left .btn i:active {
   background-color: white;
 }
@@ -242,7 +251,7 @@ body {
   line-height: 20px;
 }
 .hero-sec .main-sec .right {
-  width: 650px;
+  width: 500px;
 }
 .hero-sec .main-sec .right .txt .head {
   font-size: 3.5rem;
@@ -252,17 +261,18 @@ body {
   padding: 10px 30px;
   border-radius: 30px;
   border: none;
-  background-color: greenyellow;
+  background-color: rgb(238, 232, 227);
   cursor: pointer;
 }
+
 .cus-sec {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 30px;
-  height: 350px;
-  background-color: whitesmoke;
+  height: 95px;
+  background-color: white;
 }
 .cus-sec .txt {
   display: flex;
@@ -277,22 +287,22 @@ body {
   column-gap: 20px;
   display: flex;
 }
-.swiper {
+/*.swiper {
   width: 100%;
-  height: 100%;
+  height: 10%;
   margin-top: 20px;
 }
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
+  font-size: 5px;
+  background: #ffff;
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   align-items: center;
 }
 .swiper-slide .txt {
-  /* background: red; */
+  /* background: red; 
   width: 380px;
   padding: 30px;
 }
@@ -302,7 +312,7 @@ body {
   column-gap: 10px;
 }
 .swiper-slide .rat i {
-  color: rgb(255, 166, 0);
+  color: rgb(211, 143, 16);
 }
 .swiper-slide .rat p {
   font-size: 20px;
@@ -313,20 +323,20 @@ body {
 .swiper-slide .txt .head {
   font-size: 2rem;
 }
-.swiper-slide img {
+/*.swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 600px;
+  height: 200px;
   object-fit: cover;
-}
+}*/
 .app-sec {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 30px;
-  background-image: linear-gradient(299deg, #3e3e3e, #0e1118);
-  height: 350px;
+  background-image: linear-gradient(299deg, rgb(31,46,51), #0e1118);
+  height: 150px;
 }
 .app-sec .txt {
   display: flex;
@@ -342,19 +352,20 @@ body {
 }
 .app-sec .txt .para {
   width: 52%;
-  color: rgb(14, 13, 13);
+  color: rgb(165, 164, 164);
 }
 .app-sec .btn {
   display: flex;
   column-gap: 25px;
   margin-top: 20px;
 }
+/*playstore image*/
 .bn45 {
   width: 170px;
   height: 50px;
 }
-.bn46 {
-  width: 150px;
+/*.bn46 {
+  width: 100px;
   height: 50px;
 }
 .app-sec .rat {
@@ -364,7 +375,7 @@ body {
   margin-top: 20px;
 }
 .app-sec .rat i {
-  color: rgb(255, 166, 0);
+  color: rgb(224, 150, 11);
 }
 .app-sec .rat p {
   font-size: 20px;
@@ -372,7 +383,7 @@ body {
 }
 .app-sec .rat p span {
   color: rgba(50, 255, 60, 0.904);
-}
+}*/
 .foot-sec {
   display: flex;
   align-items: center;
@@ -380,7 +391,7 @@ body {
   flex-direction: column;
   padding: 30px;
   height: 300px;
-  background-color: black;
+  background-color: rgb(31, 46, 51);
 }
 .foot-sec .main-box {
   display: flex;
@@ -398,7 +409,7 @@ body {
 .foot-sec .main-box .box1 i {
   color: black;
   font-size: 20px;
-  background: greenyellow;
+  background: rgb(10, 10, 10);
   cursor: pointer;
   padding: 10px;
   border-radius: 30px;
@@ -424,7 +435,7 @@ body {
 }
 .foot-sec .main-box .box2 .btn a {
   text-decoration: none;
-  color: rgb(22, 21, 21);
+  color: rgb(148, 145, 145);
 }
 .foot-sec .main-box .box4 {
   display: flex;
@@ -440,7 +451,7 @@ body {
   color: white;
 }
 .foot-sec .main-box .box4 .add p {
-  color: rgb(12, 11, 11);
+  color: rgb(148, 144, 144);
 }
 .foot-sec .copy {
   margin-top: 57px;
@@ -456,7 +467,7 @@ body {
   color: white;
 }
 .foot-sec .copy p span {
-  color: greenyellow;
+  color: rgb(145, 146, 142);
 }
 .login-button{
   text-decoration: none;
@@ -868,7 +879,7 @@ a {
     text-decoration: none;
     color: #000;
 }
-.deposit
+.login
 a {
 text-decoration: none;
 color: #000;

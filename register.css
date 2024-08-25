@@ -246,8 +246,11 @@ nav ul li a:hover
 	padding: 15px;
 
     border: none;
-
     background: rgb(155, 216, 158);
+}
+.loginbutton{
+    text-decoration: none;
+    color: black;
 
 }
 

@@ -3,26 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Dashboard</title>
+    <title>Cryptocurrency Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="deposit.js">
-    
 </head>
 <body>
-    <div class="container">
-        <h1>Crypto Dashboard</h1>
-        <div class="balance-container">
-            <h2>Deposited Balance</h2>
-            <p id="balance">$0.00</p>
-            <p>Amount: <span id="confirm-amount"></span></p>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>CryptoDash</h2>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="deposit.html">Deposit</a></li>
+                <!--<li><a href="#withdrawal">Withdrawal</a></li> -->
+            </ul>
         </div>
-        <div class="investment-activities">
-            <h2>Investment Activities</h2>
-            <img src="trading1.jpg" alt="Trading Activity 1" class="trading-img">
-            <img src="trading2.jpg" alt="Trading Activity 2" class="trading-img">
-            <img src="trading3.jpg" alt="Trading Activity 3" class="trading-img">
+        <div class="main-content">
+            <div class="header">
+                <h1>Welcome, User</h1>
+                <button><a href="index.html" class="logoutbutton">Logout</a></button>
+            </div>
+            <div class="content" id="overview">
+                <h2>Overview</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Total Deposited</h3>
+                        <p id="total-deposited">$0.00</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Withdrawn</h3>
+                        <p id="total-withdrawn">$0.00</p>
+                    </div>
+                      <div class="card">
+                       <h3>Current Balance</h3>
+                       <p id="current-balance">$0.00</p>
+                       
+                      </div>
+                      <div class="card">
+                         <h3>Pending Balance</h3>
+                         <p id="pending-balance">$0.00</p>
+                </div>
+            </div>
+           <!-- <div class="content" id="deposit">
+                <h2>Deposit</h2>
+                <form id="deposit-form">
+                    <label for="deposit-amount">Amount:</label>
+                    <input type="number" id="deposit-amount" name="deposit-amount" required>
+                    <button type="submit">Deposit</button>
+                </form>
+            </div>
+            <div class="content" id="withdrawal">
+                <h2>Withdrawal</h2>
+                <form id="withdrawal-form">
+                    <label for="withdrawal-amount">Amount:</label>
+                    <input type="number" id="withdrawal-amount" name="withdrawal-amount" required>
+                    <button type="submit">Withdraw</button>
+                </form>
+            </div> 
         </div>
-    </div>
+    </div> -->
     <script src="dashboard.js"></script>
 </body>
 </html>
+

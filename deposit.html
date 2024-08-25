@@ -3,36 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Deposit</title>
+    <title>Cryptocurrency Deposit & Withdrawal</title>
     <link rel="stylesheet" href="deposit.css">
 </head>
 <body>
     <div class="container">
-        <h1>Deposit Cryptocurrency</h1>
-        <form id="deposit-form">
-            <label for="crypto-type">Select Cryptocurrency:</label>
-            <select id="crypto-type">
-                <option value="ETH">Ethereum (ETH) ERC20</option>
-                <option value="BTC">Bitcoin (BTC BEP20)</option>
-                <!-- <option value="LTC">Tether (USDT BEP20)</option> -->
-            </select>
-            <label for="crypto-address">Deposit Address:</label>
-            <input type="text" id="crypto-address" readonly>
-            <label for="amount">Amount to Deposit:</label>
-            <input type="number" id="amount" placeholder="Enter amount" step="any" required>
-            <section class="hero-sec">
-                <div class="right">
-                  <div class="txt">
-                    <p class="dashboard"><a href="dashboard.html">Dashboard</a></li>
-                    </div>
+        <div class="form-wrapper">
+            <h2>Cryptocurrency Transaction</h2>
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('deposit')">Deposit</button>
+                <button class="tab-button" onclick="openTab('withdrawal')">Withdrawal</button>
+            </div>
+            
+            <!-- deposit Form -->
+            <div id="deposit" class="tab-content active">
+                <form id="deposit-form" onsubmit="return validateDeposit()">
+                    <label for="crypto-type">Select Cryptocurrency:</label>
+                    <select id="crypto-type" name="crypto-type" onchange="updateWalletAddress()"  updateDollarEquivalent('crypto-type', 'deposit-amount', 'deposit-dollar-equivalent');">
+                        <option value="btc">Bitcoin (BTC)</option>
+                        <option value="eth">Ethereum (ETH)</option>
+                        <option value="ltc">Litecoin (LTC)</option>
+                        <option value="bnb">Binance Coin (BNB)</option>
+                    </select>
 
-            <button onclick="deposit()" id="deposit">Deposit</button>
-        </form>
-        <div id="confirmation-message" class="hidden">
-            <p>Thank you for your deposit!</p>
-            <p>Cryptocurrency: <span id="confirm-crypto"></span></p>
-            <p>Address: <span id="confirm-address"></span></p>
-            <p>Amount: <span id="confirm-amount"></span></p>
+                    <label for="wallet-address">Wallet Address:</label>
+                    <input type="text" id="wallet-address" name="wallet-address" readonly>
+
+                    <!-- fixed amount to deposit-->
+                      <label for="fixed-amount">Choose a fixed amount:</label>
+       
+                      <select id="fixed-amount" name="fixed-amount" onchange="setFixedAmount()">
+            <option value="">Select an amount</option>
+            <option value="300">Deposit $300</option>
+            <option value="1000">Deposit $1000</option>
+            <option value="5000">Deposit $5000</option>
+        </select>
+
+        <label for="deposit-amount">Cryptocurrency Amount:</label>
+        <input type="number" id="deposit-amount" name="deposit-amount" class="deposit-amount" placeholder="Cryptocurrency amount" step="any" readonly>
+
+        <!--<input type="number" id="deposit-amount" name="deposit-amount" placeholder="Enter amount" step="any" required>
+                  <label for="deposit-amount">Amount:</label>
+                   <input type="number" id="deposit-amount" name="deposit-amount" placeholder="Enter amount" step="any" required> -->
+ 
+                   <!-- Dollar Equivalent Display 
+                    <p id="deposit-dollar-equivalent"></p> -->
+                   
+                    <button type="submit">Deposit</button>
+                </form>
+            </div>
+            
+            <!-- Withdrawal Form -->
+            <div id="withdrawal" class="tab-content">
+                <form id="withdrawal-form">
+                    <label for="crypto-type-withdraw">Select Cryptocurrency:</label>
+                    <select id="crypto-type-withdraw" name="crypto-type-withdraw">
+                        <option value="btc">Bitcoin (BTC)</option>
+                        <option value="eth">Ethereum (ETH)</option>
+                        <option value="ltc">Litecoin (LTC)</option>
+                        <option value="bnb">Binance Coin (BNB)</option>
+                    </select>
+                  
+                    <!-- fixed amount to withdrawal-->
+                      <label for="fixed-amount">Choose a fixed amount:</label>
+       
+                      <select id="fixed-amount" name="fixed-amount" onchange="setFixedAmount()">
+                         <option value="">Select an amount</option>
+                         <option value="300">Deposit $100</option>
+                          <option value="1000">Deposit $900</option>
+                          <option value="5000">Deposit $4000</option>
+                        </select>
+                    
+                        <label for="withdrawal-address">Withdrawal Address:</label>
+                    <input type="text" id="withdrawal-address" name="withdrawal-address" placeholder="Enter withdrawal address" required>
+
+                   <!--<label for="withdrawal-amount">Amount:</label>
+                   <input type="number" id="withdrawal-amount" name="withdrawal-amount" class="withdrawal-amount" placeholder="Amount" step="any" readonly>-->
+
+                   <!-- Dollar Equivalent Display -->
+                    <p id="withdrawal-dollar-equivalent"></p>
+
+                    <button type="submit">Withdraw</button>
+                    
+                   <!-- <div id="dashboard">
+                    <h2>Dashboard</h2>
+                    <p>Current Balance: <span id="current-balance">$1000.00</span></p>
+                     </div>-->
+
+                </form>
+            </div>
         </div>
     </div>
     <script src="deposit.js"></script>
